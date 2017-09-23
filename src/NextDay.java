@@ -4,7 +4,6 @@ public class NextDay {
 
     public static void main(String[] args) {
        setDate();
-
     }
 
     public static void setDate() {
@@ -21,7 +20,6 @@ public class NextDay {
     public static void dateUpdate(int day, int month, int year){
         if(isRealDate(day, month, year)){
             switch(month) {
-
                 case 1:
                 case 3:
                 case 5:
@@ -96,7 +94,6 @@ public class NextDay {
     public static boolean isLeap(int year){
         return  year % 4 == 0 && ( !(year % 100 == 0) || year % 400 ==0);
     }
-
 
     public static void testUpdateDate(){
         for(int y = 3; y < 5; y++){
