@@ -10,13 +10,11 @@ public class DistinctArray {
                 array[i] = random.nextInt(15);
             }
         System.out.println(Arrays.toString(array));
-        Arrays.sort(array);
         System.out.println(Arrays.toString(distinctElements(array)));
     }
 
     public static int[] distinctElements(int[] array) {
         int counter = 0;
-        int[] distinctArray;
         Arrays.sort(array);
             for (int i = 1; i < array.length; i++) {
                 if(array[i] == array[i - 1]) {
@@ -25,13 +23,7 @@ public class DistinctArray {
                     counter++;
                 }
             }
-        distinctArray = new int[counter+1];
-        for (int number : array) {
-            if(number != 0) {
-                distinctArray[counter] = number;
-                counter--;
-            }
-        }
-        return distinctArray;
+        Arrays.sort(array);
+        return Arrays.copyOfRange(array, array.length - (counter + 1), array.length);
     }
 }
