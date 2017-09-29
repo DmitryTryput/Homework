@@ -18,7 +18,7 @@ public class DistinctArray {
         int counter = 0;
         Arrays.sort(array);
             for (int i = 1; i < array.length; i++) {
-                if(array[i] == array[i - 1]) {
+                if (array[i] == array[i - 1]) {
                     array[i - 1] = 0;
                 } else {
                     counter++;
