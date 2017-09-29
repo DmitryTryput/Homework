@@ -10,7 +10,8 @@ public class DistinctArray {
                 array[i] = random.nextInt(15);
             }
         System.out.println(Arrays.toString(array));
-        System.out.println(Arrays.toString(distinctElements(array)));
+        array = distinctElements(array);
+        System.out.println(Arrays.toString(array));
     }
 
     public static int[] distinctElements(int[] array) {
