@@ -23,13 +23,13 @@ public class ArrayMerge {
         int firstCounter = 0;
         int secondCounter = 0;
         int[] mergeArray = new int[firstArray.length + secondArray.length];
-            while(mergeCounter < mergeArray.length) {
-                if(firstCounter < firstArray.length) {
+            while (mergeCounter < mergeArray.length) {
+                if (firstCounter < firstArray.length) {
                     mergeArray[mergeCounter] = firstArray[firstCounter];
                     mergeCounter++;
                     firstCounter++;
                 }
-                if(secondCounter < secondArray.length) {
+                if (secondCounter < secondArray.length) {
                     mergeArray[mergeCounter] = secondArray[secondCounter];
                     mergeCounter++;
                     secondCounter++;
