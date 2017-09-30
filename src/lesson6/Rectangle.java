@@ -15,11 +15,11 @@ public class Rectangle {
         rightBottom = new Point(rightX, rightY);
     }
 
-    public double diameter(){
+    public double diameter() {
         return  leftTop.distance(rightBottom);
     }
 
-    public int square(){
+    public int square() {
         return xSize() * ySize();
     }
 
