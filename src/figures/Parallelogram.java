@@ -14,30 +14,30 @@ public class Parallelogram implements ScalableFigure, Polygon {
 
     @Override
     public double high() {
-        Point leftTop = new Point(rightTop.getX() - baseLength, rightTop.getY());
-        Point highBottom = new Point(leftTop.getX(), leftBottom.getY());
-        return Math.abs(Math.sqrt(Math.pow(leftBottom.distance(leftTop), 2)
-                - Math.pow(leftBottom.distance(highBottom), 2)));
+        Point leftTop = new Point(getRightTop().getX() - getBaseLength(), getRightTop().getY());
+        Point highBottom = new Point(leftTop.getX(), getLeftBottom().getY());
+        return Math.abs(Math.sqrt(Math.pow(getLeftBottom().distance(leftTop), 2)
+                - Math.pow(getLeftBottom().distance(highBottom), 2)));
     }
 
     public double diagonal() {
-        return leftBottom.distance(rightTop);
+        return getLeftBottom().distance(getRightTop());
     }
 
     @Override
     public double perimeter() {
-        return (baseLength + leftBottom.distance(new Point(rightTop.getX() - baseLength, rightTop.getY()))) * 2;
+        return (getBaseLength() + getLeftBottom().distance(new Point(getRightTop().getX() - getBaseLength(), getRightTop().getY()))) * 2;
     }
 
     @Override
     public double square() {
-        return high() * baseLength;
+        return high() * getBaseLength();
     }
 
     @Override
     public String toString() {
-        return "Параллелограмм с кординатами левой нижней точки (" + leftBottom.getX() + "," +leftBottom.getY() +
-                "), правой верхней точки (" + rightTop.getX() + "," + rightTop.getY() + ") и длиной основания " + getBaseLength();
+        return "Параллелограмм с кординатами левой нижней точки (" + getLeftBottom().getX() + "," +getLeftBottom().getY() +
+                "), правой верхней точки (" + getRightTop().getX() + "," + getRightTop().getY() + ") и длиной основания " + getBaseLength();
     }
 
     public Point getLeftBottom() {
