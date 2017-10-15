@@ -5,7 +5,7 @@ import java.util.*;
 public class WordsCount {
 
     public static void main(String[] args) {
-        String[] textArray = {"java", "Java", "javajava", "hello", "java", "world", "hello", "world", "hello!!", "hello", "hello"};
+        String[] textArray = {"java", "Java", "java", "hello", "java", "world", "hello", "world", "hello!!", "hello", "hello"};
         List<String> text = new ArrayList<>(Arrays.asList(textArray));
         uniqueWords(text);
     }
