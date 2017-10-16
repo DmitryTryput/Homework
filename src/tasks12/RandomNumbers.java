@@ -12,7 +12,9 @@ public class RandomNumbers {
     }
 
     public static File createFile(String name) {
-        File file = new File(name);
+        File dir = new File("src.tasks12");
+        dir.isDirectory();
+        File file = new File(dir, name);
         try {
             file.createNewFile();
         } catch (IOException e) {
@@ -39,7 +41,7 @@ public class RandomNumbers {
                 setOfNumbers.add(scanner.nextInt());
             }
             Collections.sort(setOfNumbers);
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         try (BufferedWriter bufferedOutputStream = new BufferedWriter(new FileWriter(file))) {
