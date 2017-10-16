@@ -6,7 +6,7 @@ import java.util.*;
 public class RandomNumbers {
 
     public static void main(String[] args) {
-        File file = createFile("numbers.txt");
+        File file = createFile("numbers" + File.separator + "txt");
         generateNumbers(file,1000);
         sortInFile(file);
     }
