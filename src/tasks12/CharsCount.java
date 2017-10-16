@@ -8,8 +8,10 @@ import java.util.Scanner;
 public class CharsCount {
 
     public static void main(String[] args) {
-        File input = new File("text.txt");
-        File output = new File("result.txt");
+        File dir = new File("src" + File.separator + "tasks12");
+        dir.isDirectory();
+        File input = new File(dir,"poem.txt");
+        File output = new File(dir,"result.txt");
         charCount(input, output);
     }
 
@@ -21,16 +23,16 @@ public class CharsCount {
             while (scanner.hasNextLine()) {
                 textArray.add(scanner.nextLine().toLowerCase());
             }
-        for (char countChar : stringOfChars.toCharArray()) {
-            int counter = 0;
-            for (String line : textArray) {
-                for (char textChar : line.toCharArray()) {
-                    if (countChar == textChar) {
-                        counter++;
+            for (char countChar : stringOfChars.toCharArray()) {
+                int counter = 0;
+                for (String line : textArray) {
+                    for (char textChar : line.toCharArray()) {
+                        if (countChar == textChar) {
+                            counter++;
+                        }
                     }
                 }
-            }
-            bufferedOutputStream.write(countChar + " - " + counter + "\n");
+                bufferedOutputStream.write(countChar + " - " + counter + "\n");
             }
         } catch (IOException e) {
                 e.printStackTrace();
