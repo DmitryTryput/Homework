@@ -6,13 +6,13 @@ import java.util.*;
 public class RandomNumbers {
 
     public static void main(String[] args) {
-        File file = createFile("numbers" + File.separator + "txt");
+        File file = createFile("numbers.txt");
         generateNumbers(file,1000);
         sortInFile(file);
     }
 
     public static File createFile(String name) {
-        File dir = new File("src.tasks12");
+        File dir = new File("src" + File.separator +"tasks12");
         dir.isDirectory();
         File file = new File(dir, name);
         try {
