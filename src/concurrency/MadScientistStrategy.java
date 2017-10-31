@@ -23,16 +23,15 @@ public class MadScientistStrategy implements Runnable {
     public void run() {
         for (int i = 0; i < DAYS; i++) {
             try {
-                Thread.sleep(madScientist.getServant().getFatigue());
                 cyclicBarrier.await();
                 semaphore.acquire();
-                System.out.println(madScientist.getName() + " отправляет своего помощника за деталями. Усталость помощника: "
-                        + madScientist.getServant().getFatigue());
+                System.out.println(madScientist.getName() + " отправляет своего помощника "
+                        + madScientist.getServant().getName() + " за деталями.");
                 madScientist.getServant().mine(dumb);
                 semaphore.release();
                 madScientist.takeParts();
                 madScientist.createRobot();
-                Thread.sleep(100 - madScientist.getServant().getFatigue());
+                Thread.sleep(100);
             } catch (InterruptedException | BrokenBarrierException e) {
                 e.printStackTrace();
             }

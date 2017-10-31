@@ -14,8 +14,8 @@ public class Challenge {
     private static int night = 1;
 
     public static void main(String[] args) {
-        MadScientist first = new MadScientist("Рик", new Servant());
-        MadScientist second = new MadScientist("Эммэтт", new Servant());
+        MadScientist first = new MadScientist("Рик", new Servant("Морти"));
+        MadScientist second = new MadScientist("Эммэтт", new Servant("Марти"));
         Factory factory = new Factory();
         Dumb dumb = new Dumb();
         ExecutorService executorService
